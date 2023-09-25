@@ -48,6 +48,75 @@
 
 // possibleBonus(5, 3) ➞ false
 
+// RESULT **************************************************
+
+// function possibleBonus(a, b) {
+//   if (a > b) {
+//     return false;
+//   }
+//   let diff = Math.abs(a - b);
+//   return diff >= 1 && diff <= 6;
+// }
+
+// console.log(possibleBonus(3, 7));
+// console.log(possibleBonus(1, 9));
+// console.log(possibleBonus(5, 3));
+
+// 02 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Create a function that will return an integer number corresponding to the amount of digits in the given integer num.
+
+// Expected results
+// num_of_digits(1000) ➞ 4
+
+// num_of_digits(12) ➞ 2
+
+// num_of_digits(1305981031) ➞ 10
+
+// num_of_digits(0) ➞ 1
 
 // RESULT **************************************************
 
+// function num_of_digits(number) {
+//   let temp = number.toString();
+//   return temp.length;
+// }
+
+// console.log(num_of_digits(1000));
+// console.log(num_of_digits(12));
+// console.log(num_of_digits(1305981031));
+// console.log(num_of_digits(0));
+
+// 03 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Write a function that converts an object into an array, where each element represents a key-value pair in the form of an array.
+
+// Notes
+// Return an empty array if the object is empty.
+
+// Expected results
+// toArray({ a: 1, b: 2 }) ➞ [["a", 1], ["b", 2]]
+
+// toArray({ shrimp: 15, tots: 12 }) ➞ [["shrimp", 15], ["tots", 12]]
+
+// toArray({}) ➞ []
+
+// RESULT **************************************************
+
+function toArray(obj) {
+  if (obj.length === 0) {
+    return [];
+  }
+  const result = [];
+  for (const key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      result.push([key, obj[key]]);
+    }
+  }
+
+  return result;
+}
+
+console.log(toArray({ a: 1, b: 2 }));
+console.log(toArray({ shrimp: 15, tots: 12 }));
+console.log(toArray({}));

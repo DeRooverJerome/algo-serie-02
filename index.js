@@ -308,20 +308,15 @@
 
 // RESULT **************************************************
 
-function reverseWords(input) {
-  // Divisez la chaîne en mots individuels en supprimant les espaces en excès.
-  const words = input.trim().split(/\s+/);
+// function reverseWords(input) {
+//   let words = input.trim().split(/\s+/);
+//   let reversedWords = words.reverse();
+//   let reversedString = reversedWords.join(" ");
+//   return reversedString;
+// }
 
-  // Inversez l'ordre des mots.
-  const reversedWords = words.reverse();
+// console.log(reverseWords(" the sky is blue"));
+// console.log(reverseWords("hello   world!  "));
+// console.log(reverseWords("a good example"));
 
-  // Reconstituez la chaîne en inversant les mots et en ajoutant un espace entre eux.
-  const reversedString = reversedWords.join(" ");
 
-  return reversedString;
-}
-
-// Test cases
-console.log(reverseWords(" the sky is blue")); // ➞ "blue is sky the"
-console.log(reverseWords("hello   world!  ")); // ➞ "world! hello"
-console.log(reverseWords("a good example")); // ➞ "example good a"
